@@ -19,7 +19,7 @@ This repo contains cache simulators for the following cache replacement policies
 
 The cache simulators are pintools designed to work with Pin-2.14 (Download script provided in `scripts/download_pin.py`)
 
-The pintools require an older version of g++ (v5.9) 
+The pintools require an older version of g++ (v4.9) 
 
 All the applications and scripts were tested on Debian Stretch with g++-6.3.0 and python (v3.5.3)
 
@@ -38,5 +38,5 @@ directory provides information for creating new applications to evaluate the pol
 
 ## Feedback 
 
-Please create an [https://github.com/CMUAbstract/POPT-CacheSim-HPCA21/issues](issue) for reporting bugs or providing feedback.
+Please create an [issue](https://github.com/CMUAbstract/POPT-CacheSim-HPCA21/issues) for reporting bugs or providing feedback.
 
