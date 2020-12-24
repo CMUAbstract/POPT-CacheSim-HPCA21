@@ -174,8 +174,7 @@ void LLC::registerOffsetMatrix(uint8_t* offsetMatrix, int32_t numEpochs, int32_t
   
   assert(dTypeID == FRONTIER || dTypeID == IRREGDATA);
 
-  //24MB spread across 16ways    
-  int sizePerWay = (3 * 1024 * 1024) / 2; 
+  int sizePerWay = (m_numSets * m_numWays * m_lineSz) / (m_numWays); //(3 * 1024 * 1024) / 2; 
   if (dTypeID == IRREGDATA)
   {
     if (m_offsetMatrix[FRONTIER] != nullptr)
