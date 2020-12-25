@@ -30,7 +30,7 @@ class CLBase {
   int argc_;
   char** argv_;
   std::string name_;
-  std::string get_args_ = "f:g:hk:su:r:x:e:";
+  std::string get_args_ = "f:g:hk:su:r:x:";
   std::vector<std::string> help_strings_;
 
   int scale_ = -1;
@@ -42,8 +42,7 @@ class CLBase {
   0 - none; 1 - improve spatial locality; 2 - improve load balancing;
   3 - combine 1 & 2 */
   int relabel_ = 0; 
-  int quantization_tiles_ = 16; 
-  int edgeFactor_ = 20;
+  int roiIter_ = 0;
 
   void AddHelpLine(char opt, std::string opt_arg, std::string text,
                    std::string def = "") {
@@ -64,13 +63,12 @@ class CLBase {
     AddHelpLine('h', "", "print this help message");
     AddHelpLine('f', "file", "load graph from file");
     AddHelpLine('s', "", "symmetrize input edge list", "false");
-    AddHelpLine('e', "edgeFactor", "Threshold for deciding push-pull switch point");
     AddHelpLine('g', "scale", "generate 2^scale kronecker graph");
     AddHelpLine('u', "scale", "generate 2^scale uniform-random graph");
     AddHelpLine('k', "degree", "average degree for synthetic graph",
                 std::to_string(degree_));
     AddHelpLine('l', "option", "relabel graph (1-spatial locality; 2-degree sort; 3-combine 1 and 2;)");
-    AddHelpLine('x', "tiles", "no. of tiles after quantization");
+    AddHelpLine('x', "roiIter", "the iter to simulate in detail");
   }
 
   bool ParseArgs() {
@@ -94,11 +92,10 @@ class CLBase {
       case 'g': scale_ = atoi(opt_arg);                     break;
       case 'h': PrintUsage();                               break;
       case 'k': degree_ = atoi(opt_arg);                    break;
-      case 'e': edgeFactor_ = atoi(opt_arg);                break;
       case 's': symmetrize_ = true;                         break;
       case 'u': uniform_ = true; scale_ = atoi(opt_arg);    break;
       case 'l': relabel_ = atoi(opt_arg);                   break;
-      case 'x': quantization_tiles_ = atoi(opt_arg);                 break;
+      case 'x': roiIter_ = atoi(opt_arg);                   break;
     }
   }
 
@@ -116,8 +113,7 @@ class CLBase {
   bool symmetrize() const { return symmetrize_; }
   bool uniform() const { return uniform_; }
   int relabel() const { return relabel_; }
-  int quantization_tiles() const { return quantization_tiles_; }
-  int edgeFactor() const { return edgeFactor_; }
+  int roiIter() const { return roiIter_; }
 };
 
 

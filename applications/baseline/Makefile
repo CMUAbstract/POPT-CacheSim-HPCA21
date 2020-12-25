@@ -21,7 +21,7 @@ ifneq ($(SERIAL), 1)
 	CXX_FLAGS += $(PAR_FLAG)
 endif
 
-KERNELS = randomizer pr #pr_delta cc
+KERNELS = randomizer pr cc_sv #pr_delta cc
 SUITE = $(KERNELS) #converter
 
 .PHONY: all

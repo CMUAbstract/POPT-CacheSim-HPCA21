@@ -21,7 +21,7 @@ ifneq ($(SERIAL), 1)
 	CXX_FLAGS += $(PAR_FLAG)
 endif
 
-KERNELS = pr #pr_delta 
+KERNELS = pr cc_sv #pr_delta 
 SUITE = $(KERNELS) #converter
 
 .PHONY: all
