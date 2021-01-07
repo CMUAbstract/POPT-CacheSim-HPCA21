@@ -67,7 +67,7 @@ cache features such as selectively caching only some data-structures in an appli
 To support multiple threads, simply set `NUM_THREADS` in `llc.h` to the number of threads used in the 
 multi-threaded applications.
 
-Currently, the simulators will work for serial versions of graph applications.
+The default simulator codes provided assume serial graph applications.
 
 ## References
 
