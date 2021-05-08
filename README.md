@@ -36,6 +36,14 @@ The following scripts should be run from the `scripts` directory:
 `simulators/README.md` contains information on defining new LLC replacement policies and the `applications/README.md`
 directory provides information for creating new applications to evaluate the policies on. 
 
+## Citation
+
+If this work was useful to you, please consider citing our work:
+
+```
+@INPROCEEDINGS{p-opt,  author={Balaji, Vignesh and Crago, Neal and Jaleel, Aamer and Lucia, Brandon},  booktitle={2021 IEEE International Symposium on High-Performance Computer Architecture (HPCA)},   title={P-OPT: Practical Optimal Cache Replacement for Graph Analytics},   year={2021},  volume={},  number={},  pages={668-681},  doi={10.1109/HPCA51647.2021.00062}}
+```
+
 ## Feedback 
 
 Please create an [issue](https://github.com/CMUAbstract/POPT-CacheSim-HPCA21/issues) for reporting bugs or providing feedback.
