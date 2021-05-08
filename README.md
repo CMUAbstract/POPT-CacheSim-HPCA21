@@ -41,7 +41,14 @@ directory provides information for creating new applications to evaluate the pol
 If this work was useful to you, please consider citing our work:
 
 ```
-@INPROCEEDINGS{p-opt,  author={Balaji, Vignesh and Crago, Neal and Jaleel, Aamer and Lucia, Brandon},  booktitle={2021 IEEE International Symposium on High-Performance Computer Architecture (HPCA)},   title={P-OPT: Practical Optimal Cache Replacement for Graph Analytics},   year={2021},  volume={},  number={},  pages={668-681},  doi={10.1109/HPCA51647.2021.00062}}
+@inproceedings{popt-hpca21,
+  title={P-OPT: Practical Optimal Cache Replacement for Graph Analytics},
+  author={Balaji, Vignesh and Crago, Neal and Jaleel, Aamer and Lucia, Brandon},
+  booktitle={2021 IEEE International Symposium on High-Performance Computer Architecture (HPCA)},
+  pages={668--681},
+  year={2021},
+  organization={IEEE}
+}
 ```
 
 ## Feedback 
