@@ -21,6 +21,8 @@ replacement policy for the NUCA (with 8 banks) LLC defines the different simulat
 
 All levels of cache use 64B cache line size and are non-inclusive. 
 
+NOTE: This cache simulator does not model coherence because we mostly analyze pull-style graph applications (shared data is read-only)
+
 ### Adding cache replacement policies
 
 We are mostly concerned with the replacement policy at the LLC (for 
