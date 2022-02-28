@@ -18,7 +18,7 @@ print('****************************')
 ## Launch simulations
 apps        = ['pr']
 simulators  = ['lru', 'drrip', 'popt-8b', 'opt-ideal']
-versions    = ['baseline', 'baseline', 'popt', 'opt-ideal']
+versions    = ['baseline', 'popt', 'opt-ideal']
 graphs      = ['uk-2002', 'hugebubbles-00020', 'kron25-d4', 'urand25-d4']
 
 for app in apps:
