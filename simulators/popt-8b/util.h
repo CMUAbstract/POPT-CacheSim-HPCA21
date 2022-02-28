@@ -8,8 +8,6 @@
 #include <cinttypes>
 #include <string>
 
-#include "timer.h"
-
 
 /*
 GAP Benchmark Suite

@@ -8,6 +8,8 @@
 #include <iostream>
 #include <fstream>
 
+using namespace std;
+
 /* ================================================================== */
 // Global variables 
 /* ================================================================== */
@@ -18,7 +20,7 @@ uint64_t numInsns {0};
 /* ===================================================================== */
 // Command line switches
 /* ===================================================================== */
-KNOB<string> KnobOutputFile(KNOB_MODE_WRITEONCE,  "pintool",
+KNOB<std::string> KnobOutputFile(KNOB_MODE_WRITEONCE,  "pintool",
     "o", "", "specify file name for MyPinTool output");
 
 KNOB<BOOL>   KnobCount(KNOB_MODE_WRITEONCE,  "pintool",

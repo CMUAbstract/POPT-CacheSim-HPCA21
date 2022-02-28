@@ -10,7 +10,7 @@ def fire(appPath, graphPath, app, graph, version, policy):
              + ' -n 1 -i 1 2> ' + logFile + ' | tee  ' + outFile
 
     
-    pinHeader = '../pin-2.14/pin.sh -ifeellucky -t ../simulators/' + policy + '/cache_pinsim.so -- ' 
+    pinHeader = '../pin-3.21/pin -ifeellucky -t ../simulators/' + policy + '/cache_pinsim.so -- ' 
     
     runCmd = pinHeader + runCmd
 

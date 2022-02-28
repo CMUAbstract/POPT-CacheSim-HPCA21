@@ -1,3 +1,7 @@
+/pin-*
+/input-graphs
+/raw_data
+
 # Prerequisites
 *.d
 

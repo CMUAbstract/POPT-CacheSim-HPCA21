@@ -15,14 +15,6 @@ This repo contains cache simulators for the following cache replacement policies
 * `applications` : Annotated graph applications designed to work with the simulators
 * `scripts`      : Helper scripts to launch experiments (and plot results)
 
-## Requirements
-
-The cache simulators are pintools designed to work with Pin-2.14 (Download script provided in `scripts/download_pin.py`)
-
-The pintools require an older version of g++ (v4.9) 
-
-All the applications and scripts were tested on Debian Stretch with g++-6.3.0 and python (v3.5.3)
-
 ## Usage Instructions
 
 The following scripts should be run from the `scripts` directory:
