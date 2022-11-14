@@ -52,7 +52,7 @@ void LLC::Init()
     m_dType_elemSz.resize(numMainDataTypes);
 
     m_tagArray = new intptr_t* [m_numSets];
-    m_dirty    = new uint8_t [m_numSets];
+    m_dirty    = new uint16_t [m_numSets];
     m_referenceCtr = new stat_t* [m_numSets];
     m_setLocks = new PIN_LOCK [m_numSets];
     m_lru_bits  = new uint8_t* [m_numSets];
@@ -339,7 +339,7 @@ bool LLC::isCacheHit(intptr_t addr, int setID, bool isWrite, bool updateReplacem
             if (isWrite == true)
             {
                 //m_dirty[setID][way] = 1;
-                uint8_t mask = 1 << way;
+                uint16_t mask = 1 << way;
                 m_dirty[setID] = m_dirty[setID] | (mask);
             }
             m_referenceCtr[setID][way]++;
@@ -354,8 +354,8 @@ bool LLC::installNewLine(intptr_t addr, int setID, intptr_t &evictedAddr, bool i
     int index = getReplacementIndex(setID, tid);
     //evictedAddr = m_tagArray[setID][index] * m_lineSz; //line to be kicked out
     evictedAddr = m_tagArray[setID][index]; //line to be kicked out
-    uint8_t mask = 1 << index;
-    uint8_t retVal = m_dirty[setID] & mask; 
+    uint16_t mask = 1 << index;
+    uint16_t retVal = m_dirty[setID] & mask; 
     assert(retVal == 0 || retVal == mask);
     if (evictedAddr == -1 * m_lineSz)
         assert(retVal == 0);

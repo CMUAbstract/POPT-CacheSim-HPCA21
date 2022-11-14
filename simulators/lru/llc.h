@@ -56,7 +56,7 @@ class LLC
 
         /* tag store */
         intptr_t** m_tagArray; //[numSets][numWays];
-        uint8_t* m_dirty;      
+        uint16_t* m_dirty;      
         stat_t** m_referenceCtr; //keep track of no. of references between insertion & eviction
         PIN_LOCK* m_setLocks;  //[numSets]; //per-set lock
         
